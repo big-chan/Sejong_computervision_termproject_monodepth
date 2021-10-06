@@ -22,6 +22,10 @@ We also recommend using `pillow-simd` instead of `pillow` for faster image prepr
 
 ## 학습 데이터 준비
 
+### KITTI
+
+- KITTI 데이터셋은 Lidar, IMU, GPU, RGB stereo 등 다양한 센서를 포함한 자율주행 학습용 데이터셋으로 매우 다양한 분야에서 사용되고 있습니다. KITTI 벤치마크는 실외 환경의 자동차 운전 장면으로 구성됩니다. 데이터 세트는 배경에 나타나는 많은 동적 개체와 빠른 자동차 움직임을 포함합니다. 본 코드는 학습과 평가를 위해서 Eigen의 split 한 것을 사용했고 또한 static frames을 제거하기 위해서 Zhou~의 pre-processing 방법론을 따랐습니다. 그 결과는  총 39,810 개의 target images와 source image pairs로 이뤄진  학습데이터와 694장의 test image 으로 구성됩니다. 
+
 - 데이터 셋 다운로드 
 아래 코드를 이 폴더에서 실행해서 데이터셋을 다운 받으실 수 있습니다.:
 ```shell
@@ -35,6 +39,7 @@ cd ..
 ```
 
 **Warning:** 데이터가 총 175GB이니 용량을 유의하시길 바랍니다. 
+
 
 
 ## ⏳ Training
