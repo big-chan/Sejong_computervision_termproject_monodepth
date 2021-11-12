@@ -83,6 +83,15 @@ python train.py --model_name finetuned_mono --load_weights_folder ~/tmp/mono_mod
 
 - 다른 학습 옵션을 보고싶으시면 ```option.py'''를 보시길 바랍니다 .
 
+### download pretrained model
+
+- 베이스 성능에 사용된 checkpoint download 
+```
+wget https://storage.googleapis.com/niantic-lon-static/research/monodepth2/mono_640x192.zip
+unzip mono_640x192.zip
+```
+
+
 ## 평가 영상 생성
 - 리더보드에 제출하기 위한 영상을 생성하기 위해서는 아래와 같이 실행시켜주시길 바랍니다. 
     -학습하신 모델의 경로를 load_weights_folder에 넣고 돌리시면 현재폴더에 ```disp_eigen_split.npz``` 가 생성될 것입니다. 그 파일을 제출해주시면 됩니다. 
